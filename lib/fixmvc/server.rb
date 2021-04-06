@@ -6,10 +6,11 @@ class FIXMVC::Server
 
   def start_in_new_thread(application)
     file = File.join(Rails.root, 'config/bloomberg.cfg')
-    @settings = Quickfix::SessionSettings.new( file  )
-    @storeFactory = Quickfix::FileStoreFactory.new( settings  )
-    @logFactory = Quickfix::ScreenLogFactory.new( false, false, false )
-    @server = Quickfix::SocketInitiator.new( application, storeFactory, settings, logFactory )
+    @settings = Quickfix::SessionSettings.new(file)
+    @storeFactory = Quickfix::FileStoreFactory.new(settings)
+    @logFactory = Quickfix::ScreenLogFactory.new(false, false, false)
+    @server = Quickfix::SocketInitiator.new(application, storeFactory,
+                                            settings, logFactory)
   end
 
   def start(application)
@@ -17,7 +18,7 @@ class FIXMVC::Server
     yield self if block_given?
     @server.start
 
-    while( true )
+    while(true)
       sleep(1)
     end
   rescue Quickfix::ConfigError, Quickfix::RuntimeError => e

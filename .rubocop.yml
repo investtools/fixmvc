@@ -1,0 +1,59 @@
+# Please check here: https://github.com/rubocop-hq/rubocop/blob/master/config/enabled.yml
+require: rubocop-rspec
+
+AllCops:
+  DisabledByDefault: true
+  Exclude:
+    - "bin/**/*"
+    - "vendor/**/*"
+    - "log/**/*"
+
+Layout/TrailingWhitespace:
+  Enabled: true
+Layout/IndentationWidth:
+  Enabled: true
+Layout/SpaceInsideParens:
+  Enabled: true
+Layout/IndentationStyle:
+  IndentationWidth: 2
+  Enabled: true
+Layout/MultilineHashBraceLayout:
+  Enabled: true
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_first_argument
+  Enabled: true
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  Enabled: true
+Layout/LineLength:
+  Max: 80
+  Enabled: true
+
+Style/EmptyMethod:
+  Enabled: true
+Style/OneLineConditional:
+  Enabled: true
+Style/AndOr:
+  Enabled: true
+Style/IfUnlessModifier:
+  Enabled: true
+
+# Checking definition styles
+Naming/AsciiIdentifiers:
+  Enabled: true
+Naming/BlockParameterName:
+  Enabled: true
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+Naming/ConstantName:
+  Enabled: true
+Naming/FileName:
+  Enabled: true
+Naming/MethodName:
+  Enabled: true
+# Naming/PredicateName:
+#   Enabled: true
+# Naming/MethodParameterName:
+#   Enabled: true

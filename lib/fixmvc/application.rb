@@ -13,27 +13,21 @@ class FIXMVC::Application < Quickfix::Application
     @sessionID = sessionID
   end
 
-  def onLogon(sessionID)
-  end
+  def onLogon(sessionID); end
 
-  def onLogout(sessionID)
-  end
+  def onLogout(sessionID); end
 
   # Message Client -> Server
 
-  def toAdmin(message, sessionID)
-  end
+  def toAdmin(message, sessionID); end
 
-  def toApp(message, sessionID)
-  end
+  def toApp(message, sessionID); end
 
   # Message Server -> Client
 
-  def fromAdmin(message, sessionID)
-  end
+  def fromAdmin(message, sessionID); end
 
-  def fromApp(message, sessionID)
-  end
+  def fromApp(message, sessionID); end
 
   def genOrderID
     @orderID = @orderID+1
