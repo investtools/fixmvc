@@ -31,8 +31,6 @@ Layout/LineLength:
   Max: 80
   Enabled: true
 
-Style/EmptyMethod:
-  Enabled: true
 Style/OneLineConditional:
   Enabled: true
 Style/AndOr:
@@ -51,8 +49,8 @@ Naming/ConstantName:
   Enabled: true
 Naming/FileName:
   Enabled: true
-Naming/MethodName:
-  Enabled: true
+#Naming/MethodName:
+#  Enabled: true
 # Naming/PredicateName:
 #   Enabled: true
 # Naming/MethodParameterName:
